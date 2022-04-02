@@ -1,0 +1,36 @@
+{
+  "name": "rnotion",
+  "version": "1.0.0",
+  "description": "리액트로 만들어보는 노션",
+  "main": "src/index.tsx",
+  "scripts": {
+    "dev": "webpack-dev-server --env env=dev",
+    "dev:bundleanalyzer": "npm run dev -- --env addons=bundleanalyzer",
+    "prebuild": "rimraf dist",
+    "build": "cross-env NODE_ENV=production webpack --progress --env env=prod",
+    "build:bundleanalyzer": "npm run build -- --env addons=bundleanalyzer",
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoonjonglyu/webpack-init-template.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "ISA",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yoonjonglyu/webpack-init-template/issues"
+  },
+  "homepage": "https://github.com/yoonjonglyu/webpack-init-template#readme",
+  "dependencies": {
+    "@emotion/styled": "^11.8.1",
+    "axios": "^0.26.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.3.0",
+    "recoil": "^0.7.0",
+    "swr": "^1.2.2"
+  }
+}
