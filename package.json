@@ -28,7 +28,8 @@
     "axios": "^0.26.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "recoil": "^0.7.0"
+    "recoil": "^0.7.0",
+    "swr": "^1.2.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.6",
