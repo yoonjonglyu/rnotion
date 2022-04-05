@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
+import PageRoutes from '../pages/PageRoutes';
 
 const App: React.FC = () => {
-  return <div>app</div>;
+  return <PageRoutes />;
 };
 
 export default App;
