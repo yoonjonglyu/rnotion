@@ -6,6 +6,8 @@ const PageRoutes: React.FC = () => {
     <Router>
       <Routes>
         <Route path="/" element={<div>main</div>} />
+        <Route path="login" element={<div>login</div>} />
+        <Route path="workspace" element={<div>workspace</div>} />
       </Routes>
     </Router>
   );
