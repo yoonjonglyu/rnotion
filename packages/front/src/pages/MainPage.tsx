@@ -1,10 +1,12 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { RouteObject } from 'react-router-dom';
 
 import MainFeature from '../feature/main';
 
-const MainPage: React.FC = () => {
-  return <Route path="/" element={MainFeature} />;
+const MainPage: RouteObject = {
+  path: '/',
+  element: <MainFeature />,
+  children: [],
 };
 
 export default MainPage;
