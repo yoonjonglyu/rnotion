@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Styled from '@emotion/styled';
 
 const Container = Styled.article`
@@ -27,18 +28,8 @@ const Intro: React.FC<IntroProps> = () => {
         <h5>* 아이디가 없으시다면 회원가입을 해주세요.</h5>
       </HeadLines>
       <LoginBox>
-        <form>
-          <LoginTitle>Login</LoginTitle>
-          <label>
-            id:
-            <input type="text" />
-          </label>
-          <label>
-            password:
-            <input type="text" />
-          </label>
-        </form>
-        <a href="#">회원가입하기</a>
+        <Link to="signin">로그인하기</Link><br/>
+        <Link to="signup">회원가입하기</Link>
       </LoginBox>
     </Container>
   );
