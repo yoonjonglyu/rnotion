@@ -13,6 +13,7 @@ const RegisterForm: React.FC<RegisterFormProps> = () => {
         비밀번호:
         <input />
       </label>
+      <button>회원가입하기</button>
     </form>
   );
 };
