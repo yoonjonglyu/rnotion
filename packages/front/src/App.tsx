@@ -1,12 +1,13 @@
 import React from 'react';
-import { RecoilRoot } from 'recoil';
+
+import ConfigureStore from './store/configureStore';
 import PageRoutes from './pages/PageRoutes';
 
 const App: React.FC = () => {
   return (
-    <RecoilRoot>
+    <ConfigureStore>
       <PageRoutes />
-    </RecoilRoot>
+    </ConfigureStore>
   );
 };
 
