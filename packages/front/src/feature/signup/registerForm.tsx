@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import useRouter from '../../lib/hooks/router';
+import { signup } from '../../lib/hooks/register';
 
 interface RegisterFormProps {}
 
@@ -11,8 +12,9 @@ const RegisterForm: React.FC<RegisterFormProps> = () => {
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(userId, userPassword);
-    router.push('/signin');
+    if (signup({ id: userId, password: userPassword })) {
+      router.push('/signin');
+    }
   };
   const handleUserId = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUserId(e.target.value);
