@@ -1,5 +1,11 @@
-export const signup = (info: { id: string; password: string }): boolean => {
-  const tmpUserList = ['user', 'test', 'admin'];
+import AuthApi from '../apis/auth';
+
+export const signup = async (info: {
+  id: string;
+  password: string;
+}): Promise<boolean> => {
+  const api = new AuthApi();
+  const duplicateUserIDResult = await api.checkDuplicateUserId(info.id);
   /**
    * 아이디 유효성 및 비밀번호 검증 로직을 세분화 하는게 ux적으로 좋다.
    * 기존 모놀리스식 웹의 경우 form전송을 통해서 페이지 전환이 일어나므로 아이디의 경우 중복검사를
@@ -7,7 +13,7 @@ export const signup = (info: { id: string; password: string }): boolean => {
    * spa로 넘어오면서 그럴 필요가 없긴하지만 사용자 편의를 위해서 id 중복 검사를 여러 방식으로 지원해주는 경우가 보임
    * 사실 유효성 검증은 라이브러리를 쓰는게 합리적이다.
    */
-  if (tmpUserList.includes(info.id)) {
+  if (duplicateUserIDResult) {
     console.error('이미 존재하는 아이디입니다.');
     return false;
   }
@@ -18,5 +24,5 @@ export const signup = (info: { id: string; password: string }): boolean => {
     return false;
   }
 
-  return true;
+  return await api.registerUser(info);
 };
