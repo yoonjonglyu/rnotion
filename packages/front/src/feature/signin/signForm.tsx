@@ -14,13 +14,13 @@ const SignForm: React.FC<SignFormProps> = () => {
   const [userPassword, setUserPassword] = useState('');
   const router = useRouter();
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     /**
      * validation이 필요한 부분 사실 이런 부분은 사람이 일일이 찾아서 막기 귀찮으므로 따로 lib 같은걸 쓰는게 합리적이라 생각된다.
      * 유의미하게 ux적인 측면에서 막는다고하면 글자수 제한, value 정합성(특수문자등) 정도 생각난다.
      */
-    if (signin({ id: userId, password: userPassword })) {
+    if (await signin({ id: userId, password: userPassword })) {
       router.push('/workspace');
     }
   };

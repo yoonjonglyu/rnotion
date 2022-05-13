@@ -10,9 +10,9 @@ const RegisterForm: React.FC<RegisterFormProps> = () => {
   const [userPassword, setUserPassword] = useState('');
   const router = useRouter();
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (signup({ id: userId, password: userPassword })) {
+    if (await signup({ id: userId, password: userPassword })) {
       router.push('/signin');
     }
   };
