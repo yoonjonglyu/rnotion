@@ -12,4 +12,7 @@ const template: ComponentStory<typeof Button> = props => (
 );
 
 export const 버튼 = template.bind({});
-버튼.args = {};
+버튼.args = {
+  color: '',
+  children: '버튼'
+};
