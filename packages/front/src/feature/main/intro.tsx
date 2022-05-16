@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Styled from '@emotion/styled';
+
+import ALink from '../../components/atoms/aLink';
 
 const Container = Styled.article`
   width: 800px;
@@ -28,8 +29,8 @@ const Intro: React.FC<IntroProps> = () => {
         <h5>* 아이디가 없으시다면 회원가입을 해주세요.</h5>
       </HeadLines>
       <LoginBox>
-        <Link to="signin">로그인하기</Link><br/>
-        <Link to="signup">회원가입하기</Link>
+        <ALink to="/signin">로그인하기</ALink><br/>
+        <ALink to="/signup">회원가입하기</ALink>
       </LoginBox>
     </Container>
   );
