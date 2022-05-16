@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { RecoilRoot } from 'recoil';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import MainFeature from '.';
@@ -9,9 +10,11 @@ export default {
   component: MainFeature,
   decorators: [
     Story => (
-      <Router>
-        <Story />
-      </Router>
+      <RecoilRoot>
+        <Router>
+          <Story />
+        </Router>
+      </RecoilRoot>
     ),
   ],
 } as ComponentMeta<typeof MainFeature>;
