@@ -4,6 +4,8 @@ import Styled from '@emotion/styled';
 import useRouter from '../../lib/hooks/router';
 import { signin } from '../../lib/hooks/auth';
 
+import Button from '../../components/atoms/button';
+
 const Form = Styled.form`
 `;
 
@@ -46,7 +48,7 @@ const SignForm: React.FC<SignFormProps> = () => {
           onChange={handleUserPassword}
         />
       </label>
-      <button>로그인</button>
+      <Button>로그인</Button>
     </Form>
   );
 };

@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import useRouter from '../../lib/hooks/router';
 import { signup } from '../../lib/hooks/register';
 
+import Button from '../../components/atoms/button';
+
 interface RegisterFormProps {}
 
 const RegisterForm: React.FC<RegisterFormProps> = () => {
@@ -38,7 +40,7 @@ const RegisterForm: React.FC<RegisterFormProps> = () => {
           onChange={handleUserPassword}
         />
       </label>
-      <button>회원가입하기</button>
+      <Button>회원가입하기</Button>
     </form>
   );
 };
