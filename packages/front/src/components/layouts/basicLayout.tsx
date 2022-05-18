@@ -1,12 +1,29 @@
 import React from 'react';
+import Styled from '@emotion/styled';
 
+const Header = Styled.header`
+`;
+const Main = Styled.main`
+`;
+const Footer = Styled.footer`
+`;
 
 interface BasicLayoutProps {
-  color?: string;
+  header?: React.ReactNode;
+  children?: React.ReactChild;
 }
 
 const BasicLayout: React.FC<BasicLayoutProps> = props => {
-  return <div>layout</div>;
+  const { header, children } = props;
+  return (
+    <>
+      <Header>{header}</Header>
+      <Main role="main">{children}</Main>
+      <Footer>
+        <small>&copy; 류윤종</small>
+      </Footer>
+    </>
+  );
 };
 
 export default BasicLayout;

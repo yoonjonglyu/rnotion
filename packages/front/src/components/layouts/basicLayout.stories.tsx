@@ -20,4 +20,6 @@ const template: ComponentStory<typeof BasicLayout> = props => <BasicLayout {...p
 
 export const Basic = template.bind({});
 Basic.args = {
+  header: <h1>해드라인</h1>,
+  children: <div>기본 레이아웃</div>
 };
