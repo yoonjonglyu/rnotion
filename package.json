@@ -6,7 +6,8 @@
   ],
   "scripts": {
     "test:front": "yarn workspace rnotion test",
-    "dev:front": "yarn workspace rnotion dev"
+    "dev:front": "yarn workspace rnotion dev",
+    "storybook": "yarn workspace rnotion storybook"
   },
   "devDependencies": {
     "lerna": "^4.0.0"
