@@ -1,7 +1,13 @@
 import React from 'react';
 
+import BasicLayout from '../../components/layouts/basicLayout';
+
 const WorkspaceFeature: React.FC = () => {
-  return <div>workspace</div>;
+  return (
+    <BasicLayout>
+      <div>workspace</div>
+    </BasicLayout>
+  );
 };
 
 export default WorkspaceFeature;

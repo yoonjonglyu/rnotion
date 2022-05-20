@@ -10,7 +10,7 @@ const Footer = Styled.footer`
 
 interface BasicLayoutProps {
   header?: React.ReactNode;
-  children?: React.ReactChild;
+  children?: React.ReactNode;
 }
 
 const BasicLayout: React.FC<BasicLayoutProps> = props => {
