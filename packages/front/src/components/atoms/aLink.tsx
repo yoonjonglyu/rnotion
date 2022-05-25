@@ -4,13 +4,15 @@ import Styled from '@emotion/styled';
 
 const A = Styled(Link)`
   min-width: 40px;
-  padding: 4px;
-  border: none;
-  color: inherit;
+  padding: 4px 10px;
+  font-size: 1rem;
+  color: #fffffff2;
   text-decoration: none;
-  background: ${props => props.color || 'lightblue'};
+  border: 0.5px solid #E8F9FD;
+  border-radius: 6px;
+  background: ${props => props.color || '#0AA1DD'};
   &:hover {
-    color: red;
+    border: 0.5px solid #2155CD;
   }
 `;
 
